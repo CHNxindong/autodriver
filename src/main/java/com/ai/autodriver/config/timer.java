@@ -1,4 +1,4 @@
-package com.ai.autodriver.schedule;
+package com.ai.autodriver.config;
 
 import com.ai.autodriver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
