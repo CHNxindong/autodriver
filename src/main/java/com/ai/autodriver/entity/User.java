@@ -2,6 +2,12 @@ package com.ai.autodriver.entity;
 
 import javax.persistence.*;
 
+/**
+ * Entity User
+ *
+ * @author CHNxindong
+ * @date 2020/3/1
+ */
 @Entity
 @Table(name="user")
 public class User {

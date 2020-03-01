@@ -10,29 +10,20 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * Swagger SwaggerConfig
+ *
+ * @author CHNxindong
+ * @date 2020/3/1
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
     @Bean
-    public Docket testApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("test")
-                .genericModelSubstitutes(DeferredResult.class)
-//                .genericModelSubstitutes(ResponseEntity.class)
-                .useDefaultResponseMessages(false)
-                .forCodeGeneration(true)
-                .pathMapping("/")// base，最终调用接口后会和paths拼接在一起
-                .select()
-                .build()
-                .apiInfo(testApiInfo());
-    }
-
-    @Bean
     public Docket demoApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("demo")
+                .groupName("API")
                 .genericModelSubstitutes(DeferredResult.class)
-//              .genericModelSubstitutes(ResponseEntity.class)
                 .useDefaultResponseMessages(false)
                 .forCodeGeneration(false)
                 .pathMapping("/")
@@ -41,25 +32,13 @@ public class SwaggerConfig {
                 .apiInfo(demoApiInfo());
     }
 
-    private ApiInfo testApiInfo() {
-        return new ApiInfoBuilder()
-                .title("Electronic Health Record(EHR) Platform API")//大标题
-                .description("EHR Platform's REST API, all the applications could access the Object model data via JSON.")//详细描述
-                .version("1.0")//版本
-                .termsOfServiceUrl("NO terms of service")
-                .contact(new Contact("小单", "http://blog.csdn.net/catoop", "365384722@qq.com"))//作者
-                .license("The Apache License, Version 2.0")
-                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
-                .build();
-    }
-
     private ApiInfo demoApiInfo() {
         return new ApiInfoBuilder()
-                .title("Electronic Health Record(EHR) Platform API")//大标题
-                .description("EHR Platform's REST API, all the applications could access the Object model data via JSON.")//详细描述
-                .version("1.0")//版本
+                .title("AI AutoDriver")
+                .description("AI AutoDriver Platform's REST API, all the applications could access the Object model data via JSON.")
+                .version("1.0")
                 .termsOfServiceUrl("NO terms of service")
-                .contact(new Contact("小单", "http://blog.csdn.net/catoop", "365384722@qq.com"))//作者
+                .contact(new Contact("dxin", "", ""))
                 .license("The Apache License, Version 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .build();

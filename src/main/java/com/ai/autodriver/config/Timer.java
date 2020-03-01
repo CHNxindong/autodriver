@@ -5,8 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+/**
+ * Schedule Timer
+ *
+ * @author CHNxindong
+ * @date 2020/3/1
+ */
 @Component
-public class timer {
+public class Timer {
     @Autowired
     UserService userService;
 

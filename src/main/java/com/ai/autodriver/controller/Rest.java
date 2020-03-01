@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Controller Rest
+ *
+ * @author CHNxindong
+ * @date 2020/3/1
+ */
 @RestController
 @RequestMapping(value = "/userApi/*")
 public class Rest {
@@ -19,7 +25,7 @@ public class Rest {
     private UserService userService;
 
     @RequestMapping(value = "getUserList", method = RequestMethod.GET)
-    @ApiOperation(value = "测试接口", notes = "测试接口详细描述")
+    @ApiOperation(value = "获取用户信息列表", notes = "全部用户信息")
     public Object getMusicList(HttpServletResponse response, @ApiParam(required = true, name = "name", value = "姓名")
     @RequestParam(name = "name", required = true) String stuName) throws IOException {
         response.setCharacterEncoding("UTF-8");
