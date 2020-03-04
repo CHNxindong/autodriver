@@ -38,4 +38,18 @@ public class Rest {
 
         return userService.getUserList();
     }
+
+    @RequestMapping(value = "getTest", method = RequestMethod.GET)
+    @ApiOperation(value = "获取测试", notes = "测试")
+    public String getTest(HttpServletResponse response) throws IOException {
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setHeader("Pragma", "no-cache");
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setDateHeader("Expires", 0);
+        response.setHeader("Access-Control-Allow-Methods", "GET");
+        response.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
+
+        return "test good yes";
+    }
 }
