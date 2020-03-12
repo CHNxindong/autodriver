@@ -1,4 +1,4 @@
-package com.ai.autodriver.config;
+package com.oj.onlinejudge.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,13 +34,10 @@ public class SwaggerConfig {
 
     private ApiInfo demoApiInfo() {
         return new ApiInfoBuilder()
-                .title("AI AutoDriver")
-                .description("AI AutoDriver Platform's REST API, all the applications could access the Object model data via JSON.")
+                .title("OnlineJudge")
                 .version("1.0")
                 .termsOfServiceUrl("NO terms of service")
                 .contact(new Contact("dxin", "", ""))
-                .license("The Apache License, Version 2.0")
-                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .build();
     }
 }

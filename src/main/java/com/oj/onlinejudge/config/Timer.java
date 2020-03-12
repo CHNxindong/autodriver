@@ -1,6 +1,6 @@
-package com.ai.autodriver.config;
+package com.oj.onlinejudge.config;
 
-import com.ai.autodriver.service.UserService;
+import com.oj.onlinejudge.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
